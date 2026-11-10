@@ -1,0 +1,18 @@
+.DS_Store
+
+# Claude Code — local/private, never publish
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+
+# Secrets and local env files
+.env
+.env.*
+*.pem
+*.key
+
+# Project admin files — local only (GitHub Pages would publish them)
+STATUS.md
+decisions.md
+inbox.md
+links.md

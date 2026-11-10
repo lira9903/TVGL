@@ -1,0 +1,35 @@
+/* The Vantage Growth Lab — cookie consent banner. Self-contained so it works on every page, with or without site.css. */
+.cc-banner {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 100;
+  max-width: 1040px; margin: 0 auto; box-sizing: border-box;
+  display: flex; align-items: center; gap: 24px;
+  padding: 20px 24px;
+  background: #170A3A; border: 1px solid #33255E; border-radius: 18px;
+  box-shadow: 0 30px 80px -24px rgba(0, 0, 0, 0.6);
+  font-family: "Manrope", Arial, sans-serif; color: #FFFFFF;
+}
+.cc-banner--flash { animation: cc-flash 900ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+@keyframes cc-flash {
+  0%, 100% { border-color: #33255E; }
+  30% { border-color: #E3C77E; box-shadow: 0 0 0 1px #E3C77E, 0 0 32px rgba(227, 199, 126, 0.4); }
+}
+.cc-banner__text { margin: 0; flex: 1; font-size: 15px; line-height: 1.5; color: #CFC9E3; }
+.cc-banner__text a { color: #E3C77E; }
+.cc-banner__text a:hover { color: #EDD597; }
+.cc-banner__actions { display: flex; gap: 12px; flex-shrink: 0; }
+
+.cc-btn {
+  font-family: inherit; font-size: 14px; font-weight: 700; line-height: 1.2;
+  min-height: 40px; padding: 0 18px; border-radius: 10px; cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.cc-btn--primary { background: #E3C77E; color: #170A3A; border: 1.5px solid #E3C77E; }
+.cc-btn--primary:hover { background: #EDD597; border-color: #EDD597; }
+.cc-btn--outline { background: transparent; color: #FFFFFF; border: 1.5px solid #5B4C8C; }
+.cc-btn--outline:hover { border-color: #E3C77E; }
+.cc-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px #6A4BD1; }
+
+@media (max-width: 767.98px) {
+  .cc-banner { flex-direction: column; align-items: stretch; gap: 16px; padding: 18px 20px; }
+  .cc-banner__actions .cc-btn { flex: 1; }
+}
